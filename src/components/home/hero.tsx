@@ -31,7 +31,7 @@ export function Hero() {
 
         <div className="hero-rise-late mt-8 flex flex-col gap-6 md:mt-10 md:flex-row md:items-end md:justify-between">
           <p className="max-w-md text-base leading-relaxed text-muted sm:text-lg">
-            Two systems in production, built at {site.studio}. Inbox Autopilot
+            Two systems in production, built at my own agency. Inbox Autopilot
             turns email into actions. Tyoma reads a website, then talks. I am
             looking for a role where that continues.
           </p>
