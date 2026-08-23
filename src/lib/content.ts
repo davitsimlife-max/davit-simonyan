@@ -6,6 +6,7 @@ export const site = {
   location: "Schagen, Netherlands",
   linkedin: "https://www.linkedin.com/in/davitsimlife",
   linkedinLabel: "linkedin.com/in/davitsimlife",
+  role: "AI Builder · Founder, Arag Agency",
   title: "Davit Simonyan — AI products, shipped",
   description:
     "Davit Simonyan, founder of Arag Agency. Inbox Autopilot turns email into actions. Tyoma reads a website, then talks.",
@@ -60,6 +61,15 @@ export const projects = [
   },
 ] as const;
 
+export const stack = [
+  "n8n",
+  "Supabase",
+  "LLM/AI APIs",
+  "Vercel",
+  "Netlify",
+  "automation",
+] as const;
+
 export const experience = [
   {
     org: "Arag Agency",
@@ -71,9 +81,9 @@ export const experience = [
   {
     org: "Miniso",
     role: "Flagship Manager",
-    dates: "Present",
+    dates: "June 2024 — Present",
     quiet: true,
-    body: "Current role. Flagship store — operations, team, floor. Held while building Arag Agency.",
+    body: "Led the flagship: team, floor, and daily operations — the store that has to work, while Arag Agency was being built.",
   },
 ] as const;
 

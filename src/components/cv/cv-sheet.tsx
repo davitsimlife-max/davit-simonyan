@@ -1,4 +1,4 @@
-import { capabilities, experience, projects, site } from "@/lib/content";
+import { capabilities, experience, projects, site, stack } from "@/lib/content";
 
 export function CvSheet() {
   return (
@@ -9,7 +9,7 @@ export function CvSheet() {
             D
           </span>
           <div>
-            <p className="cv-kicker">Founder of {site.studio}</p>
+            <p className="cv-kicker">{site.role}</p>
             <h1>{site.name}</h1>
           </div>
         </div>
@@ -32,6 +32,11 @@ export function CvSheet() {
         I learned AI <em>the only way that counts.</em>
         <span> Two live products. Looking for a team that ships.</span>
       </p>
+
+      <section>
+        <h2>Stack</h2>
+        <p className="cv-stack">{stack.join(" · ")}</p>
+      </section>
 
       <section>
         <h2>Selected work</h2>

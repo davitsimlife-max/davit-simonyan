@@ -366,10 +366,9 @@ body:has(.cv-root)::after {
 }
 
 .cv-kicker {
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
 }
 
 .cv-sheet h1 {
@@ -594,6 +593,14 @@ body:has(.cv-root)::after {
   margin-top: 0.55rem;
   font-size: 0.86rem;
   line-height: 1.55;
+  color: var(--color-fg);
+}
+
+.cv-stack {
+  margin-top: 0.45rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
   color: var(--color-fg);
 }
 
