@@ -1,0 +1,51 @@
+import { useEffect, useRef, type ReactNode } from "react";
+import { cn } from "@/lib/utils";
+
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const rect = el.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight - 32;
+
+    if (reduced || inView) {
+      el.classList.add("is-in");
+      return;
+    }
+
+    // Only hide off-screen blocks — never blank the first paint.
+    el.classList.add("will-reveal");
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("is-in");
+          io.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={cn("reveal", className)}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+    >
+      {children}
+    </div>
+  );
+}

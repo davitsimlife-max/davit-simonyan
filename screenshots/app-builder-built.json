@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Davit Simonyan — AI products, shipped",
+      "hasCanvas": false,
+      "bodyTextLen": 3135,
+      "bodyTextHash": "ad9318634a02ca27ca0dcbe09c21f8fbcff4bb1feefa535548074d8b2b01373f",
+      "bodyTextPrefix": "Skip to work D Davit Simonyan Arag Agency Work Process Contact S",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Davit Simonyan — AI products, shipped",
+      "hasCanvas": false,
+      "bodyTextLen": 3095,
+      "bodyTextHash": "5abcce545201f30b1a79bcf7ce61aeda688befbf849312c427e71f3e47546d57",
+      "bodyTextPrefix": "Skip to work D Davit Simonyan Arag Agency DAVIT SIMONYAN Founder",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
