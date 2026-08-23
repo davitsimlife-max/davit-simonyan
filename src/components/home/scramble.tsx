@@ -19,7 +19,6 @@ export function ScrambleLine({
   delay?: number;
   className?: string;
 }) {
-  // null = settled final text (SSR + post-animation). Number = decode frame.
   const [tick, setTick] = useState<number | null>(null);
 
   useEffect(() => {
@@ -72,32 +71,19 @@ export function ScrambleLine({
     };
   }, [text, delay]);
 
+  // Settled (and SSR): real type, no per-letter boxes that clip the glow.
+  if (tick === null) {
+    return <span className={cn("block max-w-full", className)}>{text}</span>;
+  }
+
   return (
-    <span className={cn("block max-w-full whitespace-nowrap", className)}>
-      <span className="sr-only">{text}</span>
-      <span aria-hidden>
-        {text.split("").map((ch, i) => {
-          if (ch === " ") {
-            return <span key={i} className="inline-block w-[0.28em]" />;
-          }
-          const lockAt = 6 + i * 1.2;
-          const locked = tick === null || tick > lockAt;
-          const shown = locked ? ch : glyph(ch);
-          return (
-            <span key={i} className="relative inline-block">
-              <span className="invisible">{ch}</span>
-              <span
-                className={cn(
-                  "absolute inset-0 overflow-hidden whitespace-nowrap text-center",
-                  !locked && "scramble-hot",
-                )}
-              >
-                {shown}
-              </span>
-            </span>
-          );
-        })}
-      </span>
+    <span className={cn("block max-w-full whitespace-nowrap", className)} aria-hidden>
+      {text.split("").map((ch, i) => {
+        if (ch === " ") return <span key={i}>{" "}</span>;
+        const lockAt = 6 + i * 1.2;
+        const locked = tick > lockAt;
+        return <span key={i}>{locked ? ch : glyph(ch)}</span>;
+      })}
     </span>
   );
 }

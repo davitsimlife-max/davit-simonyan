@@ -96,20 +96,20 @@
 
 .hero-subline {
   display: block;
-  margin-top: 0.2em;
-  font-size: clamp(1.5rem, 3.8vw, 2.95rem);
-  line-height: 1.18;
-  letter-spacing: -0.025em;
+  margin-top: 0.08em;
+  font-size: clamp(1.65rem, 4.4vw, 3.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
 
 @media (max-width: 639px) {
   .hero-subline {
-    max-width: 12.6ch;
+    max-width: 13ch;
   }
 }
 
 .hero-italic {
-  text-shadow: 0 0 18px rgba(61, 255, 208, 0.45), 0 0 42px rgba(61, 255, 208, 0.2);
+  text-shadow: 0 0 22px rgba(61, 255, 208, 0.35);
 }
 
 .kicker {
