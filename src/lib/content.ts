@@ -64,15 +64,16 @@ export const projects = [
 
 export const about = {
   kicker: "About",
-  headline: "Schagen. Four languages. Work that is live.",
+  headline: "There wasn’t really a master plan.",
   body: [
-    "I am Davit Simonyan. I founded Arag Agency to ship systems that act — Inbox Autopilot, Tyoma, and a custom stack for Miniso. I also run a Miniso flagship: team, floor, the day that has to work.",
-    "I want a team that ships AI products. Not slide decks.",
+    "I’m Davit, 26. I moved to the Netherlands in 2022 and somehow went from working at brands like Scotch & Soda, H&M and Miniso to building AI products in my free time.",
+    "I had ideas, wanted to see if I could build them, and got slightly obsessed with figuring it out.",
+    "Now some of those ideas are actually live — and I’m curious where I can take this next.",
   ],
   facts: [
-    { label: "Based", value: "Schagen, Netherlands" },
+    { label: "Based", value: "Schagen · Netherlands since 2022" },
     { label: "Languages", value: "English · Dutch · Russian · Armenian" },
-    { label: "Now", value: "Founder, Arag Agency · Flagship Manager, Miniso" },
+    { label: "Also", value: "Scotch & Soda · H&M · Miniso flagship" },
     { label: "Stack", value: "n8n · Supabase · LLM/AI APIs · Vercel · Netlify · automation" },
   ],
 } as const;
