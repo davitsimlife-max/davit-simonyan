@@ -1,5 +1,29 @@
-node_modules/
-.project_id
-.github_repo
+# deps & build
+node_modules
+dist
+.output
+.nitro
+.tanstack
+.vercel
+.wrangler
+*.local
+
+# env
 .env
 .env.*
+!.env.example
+
+# logs & caches
+*.log
+.DS_Store
+coverage
+.turbo
+.cache
+playwright-report
+test-results
+
+# workspace-only
+screenshots
+artifacts
+attachments
+.grok
