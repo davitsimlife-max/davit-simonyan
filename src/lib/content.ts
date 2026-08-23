@@ -26,8 +26,8 @@ export const projects = [
     index: "01",
     name: "Inbox Autopilot",
     tagline: "AI that turns email into actions.",
-    href: "https://inbox-autopilot-rosy.vercel.app",
-    hrefLabel: "inbox-autopilot-rosy.vercel.app",
+    href: "https://autopilot.tyoma.site",
+    hrefLabel: "autopilot.tyoma.site",
     status: "Live",
     year: "2026",
     summary:

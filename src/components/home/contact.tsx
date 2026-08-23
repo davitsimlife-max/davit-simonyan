@@ -55,7 +55,7 @@ export function Footer() {
             CV
           </a>
           <a
-            href="https://inbox-autopilot-rosy.vercel.app"
+            href="https://autopilot.tyoma.site"
             target="_blank"
             rel="noreferrer"
             className="hover:text-primary"

@@ -4,7 +4,7 @@ Portfolio of [Davit Simonyan](mailto:davit@aragagency.nl), founder of Arag Agenc
 
 Live products:
 
-- [Inbox Autopilot](https://inbox-autopilot-rosy.vercel.app) — AI that turns email into actions
+- [Inbox Autopilot](https://autopilot.tyoma.site) — AI that turns email into actions
 - [Tyoma](https://tyoma.site) — paste a URL, then talk to the site
 
 ## Develop

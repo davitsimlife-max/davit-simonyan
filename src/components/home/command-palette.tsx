@@ -34,7 +34,7 @@ export function CommandPalette({
         label: "Inbox Autopilot — live",
         hint: "Open",
         icon: ArrowUpRight,
-        run: () => window.open("https://inbox-autopilot-rosy.vercel.app", "_blank", "noopener"),
+        run: () => window.open("https://autopilot.tyoma.site", "_blank", "noopener"),
       },
       {
         id: "tyoma",
