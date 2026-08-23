@@ -10,7 +10,7 @@ export function Contact() {
         <Reveal>
           <p className="kicker">Contact</p>
           <p className="mt-3 text-sm tracking-wide text-primary">
-            {site.name} · founder of {site.studio}
+            {site.name} · founder of {site.studio} · {site.location}
           </p>
           <h2 className="mt-3 max-w-3xl font-display text-4xl tracking-tight sm:text-6xl">
             I am looking for a team that ships AI products — not slide decks.

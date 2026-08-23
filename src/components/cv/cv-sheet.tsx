@@ -14,6 +14,7 @@ export function CvSheet() {
           </div>
         </div>
         <ul className="cv-meta">
+          <li>{site.location}</li>
           <li>
             <a href={site.url}>{site.url.replace("https://", "")}</a>
           </li>
