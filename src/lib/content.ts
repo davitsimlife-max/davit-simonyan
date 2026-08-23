@@ -9,7 +9,7 @@ export const site = {
   role: "AI Builder · Founder, Arag Agency",
   title: "Davit Simonyan — AI products, shipped",
   description:
-    "Davit Simonyan, founder of Arag Agency. Inbox Autopilot turns email into actions. Tyoma reads a website, then talks.",
+    "AI builder. Founder of Arag Agency. Inbox Autopilot turns email into actions. Tyoma reads a website, then talks.",
 } as const;
 
 export const nav = [
