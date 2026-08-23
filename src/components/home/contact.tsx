@@ -1,62 +1,35 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { ArrowUpRight, FileDown, Linkedin, Loader2, Mail, Send } from "lucide-react";
 import { site } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./reveal";
 
-type Status = "idle" | "sending" | "sent" | "activate" | "error";
+const NEXT_FALLBACK = `${site.url}/?sent=1#contact`;
 
 export function Contact() {
-  const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [nextUrl, setNextUrl] = useState(NEXT_FALLBACK);
 
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    if (String(data.get("company_url") || "").trim()) {
+  useEffect(() => {
+    const origin = window.location.origin;
+    setNextUrl(`${origin}/?sent=1#contact`);
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      setStatus("sent");
+      params.delete("sent");
+      const clean = `${window.location.pathname}${params.toString() ? `?${params}` : ""}#contact`;
+      window.history.replaceState({}, "", clean);
+    }
+  }, []);
+
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
+    const honey = String(new FormData(e.currentTarget).get("_honey") || "").trim();
+    if (honey) {
+      e.preventDefault();
       setStatus("sent");
       return;
     }
-    const name = String(data.get("name") || "").trim();
-    const email = String(data.get("email") || "").trim();
-    const company = String(data.get("company") || "").trim();
-    const message = String(data.get("message") || "").trim();
-    if (!name || !email || !message) {
-      setError("Name, email, and a note — then send.");
-      setStatus("error");
-      return;
-    }
-
     setStatus("sending");
-    setError("");
-    try {
-      const res = await fetch(`https://formsubmit.co/ajax/${site.email}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          company,
-          message,
-          _subject: `${name} via buildbydavit.space`,
-          _template: "table",
-          _captcha: "false",
-        }),
-      });
-      const json = (await res.json()) as { success?: string | boolean; message?: string };
-      const ok = json.success === true || json.success === "true";
-      if (!ok) throw new Error(json.message || "Could not send");
-      const note = (json.message || "").toLowerCase();
-      setStatus(note.includes("activat") ? "activate" : "sent");
-      form.reset();
-    } catch {
-      setStatus("error");
-      setError("Could not send from here. Use email or LinkedIn instead.");
-    }
   }
 
   return (
@@ -99,13 +72,11 @@ export function Contact() {
         </Reveal>
 
         <div className="contact-wrap">
-          {status === "sent" || status === "activate" ? (
+          {status === "sent" ? (
             <div className="contact-card">
               <p className="font-display text-3xl tracking-tight">Sent.</p>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                {status === "activate"
-                  ? "First time only: confirm the activation mail in your inbox, then later messages arrive normally."
-                  : "I’ll write back. If it is urgent, LinkedIn is faster."}
+                I’ll write back. If it is urgent, LinkedIn is faster.
               </p>
               <button
                 type="button"
@@ -116,8 +87,21 @@ export function Contact() {
               </button>
             </div>
           ) : (
-            <form className="contact-card" onSubmit={onSubmit} noValidate>
+            <form
+              className="contact-card"
+              action={`https://formsubmit.co/${site.email}`}
+              method="POST"
+              onSubmit={onSubmit}
+            >
               <p className="kicker">Write</p>
+              <input type="hidden" name="_subject" value="Message via buildbydavit.space" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value={nextUrl} />
+              <label className="sr-only" aria-hidden>
+                Website
+                <input name="_honey" type="text" tabIndex={-1} autoComplete="off" />
+              </label>
               <label className="contact-label">
                 Name
                 <input
@@ -150,10 +134,6 @@ export function Contact() {
                   placeholder="Optional"
                 />
               </label>
-              <label className="sr-only" aria-hidden>
-                Company URL
-                <input name="company_url" type="text" tabIndex={-1} autoComplete="off" />
-              </label>
               <label className="contact-label">
                 Message
                 <textarea
@@ -164,9 +144,6 @@ export function Contact() {
                   placeholder="The role, the problem, a time to talk."
                 />
               </label>
-              {status === "error" && error ? (
-                <p className="text-sm text-primary">{error}</p>
-              ) : null}
               <Button type="submit" size="lg" className="w-full" disabled={status === "sending"}>
                 {status === "sending" ? (
                   <Loader2 className="size-4 animate-spin" />
