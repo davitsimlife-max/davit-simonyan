@@ -61,7 +61,7 @@ export function CvSheet() {
         <h2>Experience</h2>
         <ul className="cv-exp">
           {experience.map((job) => (
-            <li key={job.org}>
+            <li key={job.org} className={job.quiet ? "quiet" : undefined}>
               <div className="cv-exp-top">
                 <h3>
                   {job.org}

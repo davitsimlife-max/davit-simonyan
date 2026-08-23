@@ -62,13 +62,15 @@ export const experience = [
     org: "Arag Agency",
     role: "Founder",
     dates: "2026 — Present",
+    quiet: false,
     body: "Independent studio. Inbox Autopilot and Tyoma were designed, built, and shipped here — live products, not decks.",
   },
   {
     org: "Miniso",
     role: "Flagship Manager",
     dates: "Present",
-    body: "Store operations, team, customer floor. Current role — proof I can run something that has to work on Monday, while I ship AI products independently.",
+    quiet: true,
+    body: "Current role. Flagship store — operations, team, floor. Held while building Arag Agency.",
   },
 ] as const;
 
