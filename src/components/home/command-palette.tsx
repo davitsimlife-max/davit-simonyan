@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowUpRight, Copy, FileText, FolderOpen, Mail, Search } from "lucide-react";
+import { ArrowUpRight, Copy, FileText, FolderOpen, Linkedin, Mail, Search } from "lucide-react";
 import { site } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -53,12 +53,19 @@ export function CommandPalette({
         },
       },
       {
+        id: "linkedin",
+        label: "Open LinkedIn",
+        hint: "Profile",
+        icon: Linkedin,
+        run: () => window.open(site.linkedin, "_blank", "noopener"),
+      },
+      {
         id: "mail",
         label: `Write ${site.email}`,
         hint: "Mail",
         icon: Mail,
         run: () => {
-          window.location.href = `mailto:${site.email}`;
+          document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
         },
       },
       {

@@ -4,6 +4,8 @@ export const site = {
   email: "davit@aragagency.nl",
   url: "https://buildbydavit.space",
   location: "Schagen, Netherlands",
+  linkedin: "https://www.linkedin.com/in/davitsimlife",
+  linkedinLabel: "linkedin.com/in/davitsimlife",
   title: "Davit Simonyan — AI products, shipped",
   description:
     "Davit Simonyan, founder of Arag Agency. Inbox Autopilot turns email into actions. Tyoma reads a website, then talks.",
