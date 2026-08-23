@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { About } from "./about";
 import { CommandPalette } from "./command-palette";
 import { Contact, Footer } from "./contact";
 import { CursorLayer } from "./cursor";
@@ -36,6 +37,7 @@ export function HomePage() {
       <main>
         <Hero />
         <Work />
+        <About />
         <Process />
         <Contact />
       </main>

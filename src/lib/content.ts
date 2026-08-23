@@ -14,6 +14,7 @@ export const site = {
 
 export const nav = [
   { href: "#work", label: "Work" },
+  { href: "#about", label: "About" },
   { href: "#process", label: "Process" },
   { href: "#contact", label: "Contact" },
 ] as const;
@@ -60,6 +61,21 @@ export const projects = [
     ],
   },
 ] as const;
+
+export const about = {
+  kicker: "About",
+  headline: "Schagen. Four languages. Work that is live.",
+  body: [
+    "I am Davit Simonyan. I founded Arag Agency to ship systems that act — Inbox Autopilot, Tyoma, and a custom stack for Miniso. I also run a Miniso flagship: team, floor, the day that has to work.",
+    "I want a team that ships AI products. Not slide decks.",
+  ],
+  facts: [
+    { label: "Based", value: "Schagen, Netherlands" },
+    { label: "Languages", value: "English · Dutch · Russian · Armenian" },
+    { label: "Now", value: "Founder, Arag Agency · Flagship Manager, Miniso" },
+    { label: "Stack", value: "n8n · Supabase · LLM/AI APIs · Vercel · Netlify · automation" },
+  ],
+} as const;
 
 export const stack = [
   "n8n",

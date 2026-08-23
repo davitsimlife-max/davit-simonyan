@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowUpRight, Copy, FileText, FolderOpen, Linkedin, Mail, Search } from "lucide-react";
+import { ArrowUpRight, Copy, FileText, FolderOpen, Linkedin, Mail, Search, User } from "lucide-react";
 import { site } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -28,6 +28,13 @@ export function CommandPalette({
         hint: "Section",
         icon: FolderOpen,
         run: () => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" }),
+      },
+      {
+        id: "about",
+        label: "Jump to about",
+        hint: "Section",
+        icon: User,
+        run: () => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }),
       },
       {
         id: "inbox",
