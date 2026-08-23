@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowUpRight, Copy, FolderOpen, Mail, Search } from "lucide-react";
+import { ArrowUpRight, Copy, FileText, FolderOpen, Mail, Search } from "lucide-react";
 import { site } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -42,6 +42,15 @@ export function CommandPalette({
         hint: "Open",
         icon: ArrowUpRight,
         run: () => window.open("https://tyoma.site", "_blank", "noopener"),
+      },
+      {
+        id: "cv",
+        label: "Open CV",
+        hint: "Page",
+        icon: FileText,
+        run: () => {
+          window.location.href = "/cv";
+        },
       },
       {
         id: "mail",

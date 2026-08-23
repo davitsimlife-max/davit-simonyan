@@ -1,22 +1,9 @@
-import { useState } from "react";
-import { Check, Copy, Mail } from "lucide-react";
+import { FileDown, Mail } from "lucide-react";
 import { site } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./reveal";
 
 export function Contact() {
-  const [copied, setCopied] = useState(false);
-
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(site.email);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1600);
-    } catch {
-      setCopied(false);
-    }
-  }
-
   return (
     <section id="contact" className="scroll-mt-20 border-t border-border py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -41,10 +28,15 @@ export function Contact() {
               {site.email}
             </a>
           </Button>
-          <Button type="button" variant="outline" size="lg" onClick={copy}>
-            {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
-            {copied ? "Copied" : "Copy email"}
+          <Button asChild variant="outline" size="lg">
+            <a href="/Davit-Simonyan-CV.pdf" download>
+              <FileDown className="size-4" />
+              Download CV
+            </a>
           </Button>
+          <a href="/cv" className="text-sm text-muted hover:text-primary">
+            View online
+          </a>
         </Reveal>
       </div>
     </section>
@@ -59,6 +51,9 @@ export function Footer() {
           © {new Date().getFullYear()} {site.name} · {site.studio}
         </p>
         <p className="flex flex-wrap gap-4">
+          <a href="/cv" className="hover:text-primary">
+            CV
+          </a>
           <a
             href="https://inbox-autopilot-rosy.vercel.app"
             target="_blank"

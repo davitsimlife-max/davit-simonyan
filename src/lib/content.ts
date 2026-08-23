@@ -2,6 +2,7 @@ export const site = {
   name: "Davit Simonyan",
   studio: "Arag Agency",
   email: "davit@aragagency.nl",
+  url: "https://buildbydavit.space",
   title: "Davit Simonyan — AI products, shipped",
   description:
     "Davit Simonyan, founder of Arag Agency. Inbox Autopilot turns email into actions. Tyoma reads a website, then talks.",
@@ -26,6 +27,7 @@ export const projects = [
     name: "Inbox Autopilot",
     tagline: "AI that turns email into actions.",
     href: "https://inbox-autopilot-rosy.vercel.app",
+    hrefLabel: "inbox-autopilot-rosy.vercel.app",
     status: "Live",
     year: "2026",
     summary:
@@ -42,6 +44,7 @@ export const projects = [
     name: "Tyoma",
     tagline: "Your website, already understood.",
     href: "https://tyoma.site",
+    hrefLabel: "tyoma.site",
     status: "Live",
     year: "2026",
     summary:
@@ -51,6 +54,21 @@ export const projects = [
       "Interface in English, Dutch, and Russian",
       "Built in public as a live demo for Arag Agency",
     ],
+  },
+] as const;
+
+export const experience = [
+  {
+    org: "Arag Agency",
+    role: "Founder",
+    dates: "2026 — Present",
+    body: "Independent studio. Inbox Autopilot and Tyoma were designed, built, and shipped here — live products, not decks.",
+  },
+  {
+    org: "Miniso",
+    role: "Flagship Manager",
+    dates: "Present",
+    body: "Store operations, team, customer floor. Current role — proof I can run something that has to work on Monday, while I ship AI products independently.",
   },
 ] as const;
 
