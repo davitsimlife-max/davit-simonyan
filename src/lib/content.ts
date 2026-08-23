@@ -16,7 +16,7 @@ export const nav = [
 
 export const stats = [
   { value: "2", unit: "live", label: "products" },
-  { value: "3", unit: "langs", label: "EN · NL · RU" },
+  { value: "4", unit: "langs", label: "EN · NL · RU · HY" },
   { value: "1", unit: "builder", label: "available" },
 ] as const;
 
@@ -63,7 +63,7 @@ export const experience = [
     role: "Founder",
     dates: "2026 — Present",
     quiet: false,
-    body: "Independent studio. Inbox Autopilot and Tyoma were designed, built, and shipped here — live products, not decks.",
+    body: "Independent studio. Inbox Autopilot, Tyoma, and a custom system built for Miniso — live products, not decks.",
   },
   {
     org: "Miniso",
