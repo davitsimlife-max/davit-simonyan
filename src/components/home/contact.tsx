@@ -98,7 +98,7 @@ export function Contact() {
           </div>
         </Reveal>
 
-        <Reveal delay={80}>
+        <div className="contact-wrap">
           {status === "sent" || status === "activate" ? (
             <div className="contact-card">
               <p className="font-display text-3xl tracking-tight">Sent.</p>
@@ -177,7 +177,7 @@ export function Contact() {
               </Button>
             </form>
           )}
-        </Reveal>
+        </div>
       </div>
     </section>
   );
