@@ -27,3 +27,4 @@ screenshots
 artifacts
 attachments
 .grok
+.env*
