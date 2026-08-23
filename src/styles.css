@@ -228,6 +228,8 @@
 .contact-wrap {
   min-width: 0;
 }
+
+.contact-card {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
