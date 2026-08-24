@@ -33,8 +33,7 @@ export function Hero() {
           <p className="max-w-md text-base leading-relaxed text-muted sm:text-lg">
             Two systems in production, built at my own agency. Inbox Autopilot
             turns email into actions. Tyoma reads a website, then talks. I am
-            looking for a founding-engineer or AI product role where that
-            continues.
+            looking for a team that ships.
           </p>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <Button asChild size="lg" className="w-full sm:w-auto">

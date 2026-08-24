@@ -41,8 +41,7 @@ export function Contact() {
             {site.name} · founder of {site.studio} · {site.location}
           </p>
           <h2 className="mt-3 max-w-3xl font-display text-4xl tracking-tight sm:text-6xl">
-            Founding engineer, AI product, automation — on a team that ships,
-            not slide decks.
+            AI builder. Looking for a team that ships — not slide decks.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
             Write here and it lands in my inbox. Or open LinkedIn if that is
