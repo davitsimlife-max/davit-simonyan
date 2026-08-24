@@ -7,6 +7,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/davitsimlife",
   linkedinLabel: "linkedin.com/in/davitsimlife",
   role: "AI Builder · Founder, Arag Agency",
+  seeking: "Founding engineer · AI product · automation",
   title: "Davit Simonyan — AI products, shipped",
   description:
     "AI builder. Founder of Arag Agency. Inbox Autopilot turns email into actions. Tyoma reads a website, then talks.",

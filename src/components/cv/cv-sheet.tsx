@@ -30,7 +30,7 @@ export function CvSheet() {
 
       <p className="cv-lede">
         I learned AI <em>the only way that counts.</em>
-        <span> Two live products. Looking for a team that ships.</span>
+        <span> Two live products. Looking for a founding-engineer or AI product role on a team that ships.</span>
       </p>
 
       <section>
@@ -100,7 +100,7 @@ export function CvSheet() {
         <p>
           Work, live — <a href={site.url}>{site.url.replace("https://", "")}</a>
         </p>
-        <p>Available for roles that ship AI products.</p>
+        <p>Available — founding engineer · AI product · automation.</p>
       </footer>
     </article>
   );
