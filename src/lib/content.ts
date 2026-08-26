@@ -87,7 +87,7 @@ export const about = {
     { label: "Based", value: "Schagen · Netherlands since 2022" },
     { label: "Languages", value: "English · Dutch · Russian · Armenian" },
     { label: "Also", value: "Scotch & Soda · H&M · Miniso flagship" },
-    { label: "Stack", value: "n8n · Supabase · LLM/AI APIs · Vercel · Netlify · automation" },
+    { label: "Stack", value: "Claude API · n8n · Supabase · Groq · DigitalOcean · Netlify · Vercel · Claude Code · ChatGPT · Codex · Grok" },
   ],
 } as const;
 
@@ -100,6 +100,9 @@ export const stack = [
   "Netlify",
   "Vercel",
   "Claude Code",
+  "ChatGPT",
+  "Codex",
+  "Grok",
 ] as const;
 
 export const education = [
