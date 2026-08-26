@@ -86,6 +86,7 @@ export const about = {
   facts: [
     { label: "Based", value: "Schagen · Netherlands since 2022" },
     { label: "Languages", value: "English · Dutch · Russian · Armenian" },
+    { label: "Academy", value: "Build with Claude — Huva.io Academy (completed)" },
     { label: "Also", value: "Scotch & Soda · H&M · Miniso flagship" },
     { label: "Stack", value: "Claude API · n8n · Supabase · Groq · DigitalOcean · Netlify · Vercel · Claude Code · ChatGPT · Codex · Grok" },
   ],
