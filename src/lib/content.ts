@@ -7,6 +7,8 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/davitsimlife",
   linkedinLabel: "linkedin.com/in/davitsimlife",
   role: "AI Builder · Founder, Arag Agency",
+  cvHeadline: "AI Automation Builder | n8n Workflows & Custom AI Tools",
+  cvSub: "Founder, Arag Agency",
   seeking: "AI builder. Looking for a team that ships.",
   title: "Davit Simonyan — AI products, shipped",
   description:
@@ -43,6 +45,11 @@ export const projects = [
       "Inquiry arrives → a reply is drafted",
       "Ambiguous mail → routed to a human with a reason",
     ],
+    cvPoints: [
+      "Router classifies first: extract, draft, or escalate — the model does not write blindly",
+      "Invoice path turns unstructured mail into typed fields, not a summary",
+      "Low-confidence mail is gated; a human gets the reason, not a guess",
+    ],
   },
   {
     id: "tyoma",
@@ -59,6 +66,11 @@ export const projects = [
       "Instant URL scan, then grounded chat",
       "Interface in English, Dutch, and Russian",
       "Built in public as a live demo for Arag Agency",
+    ],
+    cvPoints: [
+      "Page is fetched and used as context before any reply is generated",
+      "Answers stay on that source — no brochure, no invented FAQ",
+      "One product, three languages: English, Dutch, Russian",
     ],
   },
 ] as const;
@@ -80,12 +92,27 @@ export const about = {
 } as const;
 
 export const stack = [
+  "Claude API",
   "n8n",
-  "Supabase",
-  "LLM/AI APIs",
-  "Vercel",
+  "Supabase (Postgres, auth, RLS, pgvector)",
+  "Groq",
+  "DigitalOcean",
   "Netlify",
-  "automation",
+  "Vercel",
+  "Claude Code",
+] as const;
+
+export const education = [
+  {
+    school: "Huva.io Academy",
+    program: "Build with Claude",
+    dates: "Completed",
+  },
+  {
+    school: "MBO 4",
+    program: "Fashion & Textile",
+    dates: "",
+  },
 ] as const;
 
 export const experience = [

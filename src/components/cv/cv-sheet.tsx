@@ -1,4 +1,4 @@
-import { capabilities, experience, projects, site, stack } from "@/lib/content";
+import { capabilities, education, experience, projects, site, stack } from "@/lib/content";
 
 export function CvSheet() {
   return (
@@ -9,7 +9,8 @@ export function CvSheet() {
             D
           </span>
           <div>
-            <p className="cv-kicker">{site.role}</p>
+            <p className="cv-kicker">{site.cvHeadline}</p>
+            <p className="cv-sub">{site.cvSub}</p>
             <h1>{site.name}</h1>
           </div>
         </div>
@@ -54,7 +55,7 @@ export function CvSheet() {
                   </div>
                   <p className="cv-tag">{project.tagline}</p>
                   <ul>
-                    {project.points.map((point) => (
+                    {(project.cvPoints ?? project.points).map((point) => (
                       <li key={point}>{point}</li>
                     ))}
                   </ul>
@@ -79,6 +80,23 @@ export function CvSheet() {
                 <p>{job.dates}</p>
               </div>
               <p>{job.body}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul className="cv-exp">
+          {education.map((item) => (
+            <li key={item.school}>
+              <div className="cv-exp-top">
+                <h3>
+                  {item.school}
+                  <span>{item.program}</span>
+                </h3>
+                {item.dates ? <p>{item.dates}</p> : null}
+              </div>
             </li>
           ))}
         </ul>

@@ -354,7 +354,7 @@ body:has(.cv-root)::after {
   width: 210mm;
   min-height: 297mm;
   height: 297mm;
-  padding: 15mm 16mm 14mm;
+  padding: 11mm 16mm 10mm;
   background: var(--color-bg);
   color: var(--color-fg);
   box-shadow: 0 0 0 1px rgba(61, 255, 208, 0.22), 0 24px 80px rgba(0, 0, 0, 0.45);
@@ -396,13 +396,22 @@ body:has(.cv-root)::after {
 .cv-kicker {
   font-size: 0.72rem;
   letter-spacing: 0.04em;
+  line-height: 1.35;
   color: var(--color-primary);
+  max-width: 22rem;
+}
+
+.cv-sub {
+  margin-top: 0.12rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
 }
 
 .cv-sheet h1 {
   margin-top: 0.15rem;
   font-family: var(--font-display);
-  font-size: 2.55rem;
+  font-size: 2.4rem;
   line-height: 0.95;
   letter-spacing: -0.03em;
 }
@@ -429,9 +438,9 @@ body:has(.cv-root)::after {
 }
 
 .cv-lede {
-  margin: 1.35rem 0 0;
+  margin: 0.75rem 0 0;
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: 1.32rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
   max-width: 28ch;
@@ -455,8 +464,8 @@ body:has(.cv-root)::after {
 }
 
 .cv-sheet section {
-  margin-top: 1.15rem;
-  padding-top: 0.9rem;
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
   border-top: 1px solid var(--color-line);
 }
 
@@ -471,13 +480,13 @@ body:has(.cv-root)::after {
 .cv-work,
 .cv-exp {
   list-style: none;
-  margin: 0.7rem 0 0;
+  margin: 0.45rem 0 0;
   padding: 0;
 }
 
 .cv-work {
   display: grid;
-  gap: 0.95rem;
+  gap: 0.5rem;
 }
 
 .cv-work-top {
@@ -526,7 +535,7 @@ body:has(.cv-root)::after {
 }
 
 .cv-work-copy ul {
-  margin: 0.4rem 0 0.35rem;
+  margin: 0.28rem 0 0.25rem;
   padding: 0;
   list-style: none;
 }
@@ -534,8 +543,8 @@ body:has(.cv-root)::after {
 .cv-work-copy ul li {
   position: relative;
   padding-left: 0.75rem;
-  font-size: 0.8rem;
-  line-height: 1.45;
+  font-size: 0.76rem;
+  line-height: 1.38;
   color: var(--color-muted);
 }
 
@@ -556,7 +565,7 @@ body:has(.cv-root)::after {
 
 .cv-exp {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .cv-exp-top {
@@ -599,7 +608,7 @@ body:has(.cv-root)::after {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.85rem 1.25rem;
+  gap: 0.55rem 1.25rem;
 }
 
 .cv-cap-grid h3 {
@@ -625,16 +634,16 @@ body:has(.cv-root)::after {
 }
 
 .cv-stack {
-  margin-top: 0.45rem;
-  font-size: 0.84rem;
-  line-height: 1.5;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
   letter-spacing: 0.01em;
   color: var(--color-fg);
 }
 
 .cv-foot {
   margin-top: auto;
-  padding-top: 0.9rem;
+  padding-top: 0.55rem;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
