@@ -25,6 +25,9 @@ export function CvSheet() {
           <li>
             <a href={`mailto:${site.email}`}>{site.email}</a>
           </li>
+          <li>
+            <a href={site.phoneHref}>{site.phone}</a>
+          </li>
           <li>English · Dutch · Russian · Armenian</li>
         </ul>
       </header>

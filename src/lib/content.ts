@@ -2,6 +2,8 @@ export const site = {
   name: "Davit Simonyan",
   studio: "Arag Agency",
   email: "davit@aragagency.nl",
+  phone: "+31 6 13923875",
+  phoneHref: "tel:+31613923875",
   url: "https://buildbydavit.space",
   location: "Schagen, Netherlands",
   linkedin: "https://www.linkedin.com/in/davitsimlife",
