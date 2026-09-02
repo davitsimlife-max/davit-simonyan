@@ -4,7 +4,7 @@ export function AragViewport() {
   return (
     <div className="overflow-hidden rounded-xl bg-surface shadow-hairline">
       <div className="flex items-center justify-between gap-3 border-b border-border px-4 py-3">
-        <p className="kicker">Live viewport</p>
+        <p className="kicker">Studio site</p>
         <a
           href="https://aragagency.nl"
           target="_blank"
@@ -15,15 +15,26 @@ export function AragViewport() {
           <ArrowUpRight className="size-3.5" />
         </a>
       </div>
-      <div className="relative h-[22rem] bg-[#ede9e1] sm:h-[28rem]">
-        <iframe
-          title="Arag Agency"
-          src="https://aragagency.nl/"
-          className="absolute inset-0 h-full w-full border-0 bg-[#ede9e1]"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
+      <a
+        href="https://aragagency.nl"
+        target="_blank"
+        rel="noreferrer"
+        className="group relative block p-3 sm:p-4"
+      >
+        <span className="block overflow-hidden rounded-lg shadow-hairline">
+          <img
+            src="/arag-still.jpg"
+            alt="Arag Agency — the studio site"
+            className="aspect-[16/10] w-full object-cover object-top transition duration-300 group-hover:opacity-90"
+          />
+        </span>
+        <span className="pointer-events-none absolute inset-0 flex items-end justify-end p-6 sm:p-8">
+          <span className="inline-flex items-center gap-1 rounded-sm bg-bg/90 px-3 py-1.5 text-xs tracking-wide text-primary shadow-hairline">
+            Open live
+            <ArrowUpRight className="size-3.5" />
+          </span>
+        </span>
+      </a>
     </div>
   );
 }
