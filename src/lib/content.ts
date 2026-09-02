@@ -75,6 +75,24 @@ export const projects = [
       "One product, three languages: English, Dutch, Russian",
     ],
   },
+  {
+    id: "arag",
+    index: "03",
+    name: "Arag",
+    category: "Studio · Website",
+    tagline: "The studio, live.",
+    href: "https://aragagency.nl",
+    hrefLabel: "aragagency.nl",
+    status: "Live",
+    year: "2026",
+    summary:
+      "The agency, shipped as a site. Services, cases, approach, a contact form that works. Paper instead of neon — on purpose.",
+    points: [
+      "Designed and built end to end — no template",
+      "Cases, services, and contact are live, not a deck",
+      "A different visual system, because the studio is not the portfolio",
+    ],
+  },
 ] as const;
 
 export const about = {

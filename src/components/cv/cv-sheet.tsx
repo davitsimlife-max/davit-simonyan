@@ -45,7 +45,9 @@ export function CvSheet() {
       <section>
         <h2>Selected work</h2>
         <ol className="cv-work">
-          {projects.map((project) => (
+          {projects
+            .filter((project) => project.id !== "arag")
+            .map((project) => (
             <li key={project.id}>
               <div className="cv-work-top">
                 <p className="cv-index">{project.index}</p>

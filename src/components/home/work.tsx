@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/lib/content";
 import { Button } from "@/components/ui/button";
+import { AragViewport } from "./arag-viewport";
 import { InboxDemo } from "./inbox-demo";
 import { Reveal } from "./reveal";
 import { TyomaDemo } from "./tyoma-demo";
@@ -22,6 +23,9 @@ export function Work() {
               <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
                 <Reveal className="min-w-0 lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
                   <p className="kicker text-primary">{project.index}</p>
+                  {"category" in project && project.category ? (
+                    <p className="mt-2 text-xs tracking-wide text-muted">{project.category}</p>
+                  ) : null}
                   <h3 className="mt-3 font-display text-3xl tracking-tight sm:text-4xl">
                     {project.name}
                   </h3>
@@ -50,7 +54,13 @@ export function Work() {
                   </div>
                 </Reveal>
                 <Reveal className="min-w-0 lg:col-span-7" delay={80}>
-                  {project.id === "inbox" ? <InboxDemo /> : <TyomaDemo />}
+                  {project.id === "inbox" ? (
+                    <InboxDemo />
+                  ) : project.id === "tyoma" ? (
+                    <TyomaDemo />
+                  ) : (
+                    <AragViewport />
+                  )}
                 </Reveal>
               </div>
             </article>

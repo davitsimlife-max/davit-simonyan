@@ -51,6 +51,13 @@ export function CommandPalette({
         run: () => window.open("https://tyoma.site", "_blank", "noopener"),
       },
       {
+        id: "arag",
+        label: "Arag — live",
+        hint: "Open",
+        icon: ArrowUpRight,
+        run: () => window.open("https://aragagency.nl", "_blank", "noopener"),
+      },
+      {
         id: "cv",
         label: "Open CV",
         hint: "Page",

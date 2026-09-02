@@ -185,6 +185,9 @@ export function Footer() {
           <a href="https://tyoma.site" target="_blank" rel="noreferrer" className="hover:text-primary">
             Tyoma
           </a>
+          <a href="https://aragagency.nl" target="_blank" rel="noreferrer" className="hover:text-primary">
+            Arag
+          </a>
           <a href={`mailto:${site.email}`} className="hover:text-primary">
             Email
           </a>

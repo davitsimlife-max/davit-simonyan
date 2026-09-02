@@ -32,8 +32,8 @@ export function Hero() {
         <div className="hero-rise-late mt-8 flex flex-col gap-6 md:mt-10 md:flex-row md:items-end md:justify-between">
           <p className="max-w-md text-base leading-relaxed text-muted sm:text-lg">
             Two systems in production, built at my own agency. Inbox Autopilot
-            turns email into actions. Tyoma reads a website, then talks. I am
-            looking for a team that ships.
+            turns email into actions. Tyoma reads a website, then talks. The
+            studio has its own site. I am looking for a team that ships.
           </p>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <Button asChild size="lg" className="w-full sm:w-auto">
