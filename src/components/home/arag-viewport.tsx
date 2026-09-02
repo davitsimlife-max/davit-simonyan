@@ -15,20 +15,23 @@ export function AragViewport() {
           <ArrowUpRight className="size-3.5" />
         </a>
       </div>
-      <div className="arag-stage relative h-[22rem] bg-surface-2 sm:h-[28rem]">
-        <img
-          src="/arag-still.jpg"
-          alt=""
-          aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-top"
-        />
-        <iframe
-          title="Arag Agency"
-          src="https://aragagency.nl/"
-          className="absolute inset-0 h-full w-full border-0 bg-[#ede9e1]"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+      <div className="arag-well bg-bg p-3 sm:p-4">
+        <div className="arag-stage relative h-[20rem] overflow-hidden rounded-lg shadow-hairline sm:h-[26rem]">
+          <img
+            src="/arag-still.jpg"
+            alt=""
+            aria-hidden
+            className="arag-screen pointer-events-none absolute inset-0 h-full w-full object-cover object-top"
+          />
+          <iframe
+            title="Arag Agency"
+            src="https://aragagency.nl/"
+            className="arag-screen absolute inset-0 h-full w-full border-0 bg-surface"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <div className="arag-grade" aria-hidden />
+        </div>
       </div>
     </div>
   );

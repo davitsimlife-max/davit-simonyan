@@ -310,16 +310,44 @@
   line-height: 1.5;
 }
 
-/* Arag live preview: grayscale idle, full colour on hover/focus */
-.arag-stage {
-  filter: grayscale(1) contrast(1.06);
-  transform: translateZ(0);
-  transition: filter 520ms ease;
+/* Arag live preview — grade into the navy page, colour on hover */
+.arag-well {
+  background: var(--color-bg);
 }
 
-.arag-frame:hover .arag-stage,
-.arag-frame:focus-within .arag-stage {
-  filter: grayscale(0) contrast(1);
+.arag-stage {
+  isolation: isolate;
+  box-shadow:
+    var(--shadow-hairline),
+    inset 0 0 72px rgba(6, 8, 15, 0.55);
+}
+
+.arag-screen {
+  filter: grayscale(1) brightness(0.42) contrast(1.22);
+  transform: translateZ(0);
+  transition: filter 620ms ease;
+}
+
+.arag-grade {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6, 8, 15, 0.28) 0%, rgba(6, 8, 15, 0.62) 100%),
+    linear-gradient(90deg, rgba(61, 255, 208, 0.1), transparent 42%, rgba(61, 255, 208, 0.08));
+  mix-blend-mode: multiply;
+  opacity: 1;
+  transition: opacity 620ms ease;
+}
+
+.arag-frame:hover .arag-screen,
+.arag-frame:focus-within .arag-screen {
+  filter: grayscale(0) brightness(0.86) contrast(1.04);
+}
+
+.arag-frame:hover .arag-grade,
+.arag-frame:focus-within .arag-grade {
+  opacity: 0.22;
 }
 
 .arag-frame:hover {
@@ -327,7 +355,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .arag-stage {
+  .arag-screen,
+  .arag-grade {
     transition: none;
   }
 }
