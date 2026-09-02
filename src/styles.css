@@ -310,6 +310,30 @@
   line-height: 1.5;
 }
 
+/* Arag live preview: grayscale idle, full colour on hover/focus */
+.arag-stage {
+  filter: grayscale(1) contrast(1.06);
+  transform: translateZ(0);
+  transition: filter 520ms ease;
+}
+
+.arag-frame:hover .arag-stage,
+.arag-frame:focus-within .arag-stage {
+  filter: grayscale(0) contrast(1);
+}
+
+.arag-frame:hover {
+  box-shadow: var(--shadow-hairline-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arag-stage {
+    transition: none;
+  }
+}
+
+/* —— CV / A4 sheet —— */
+
 /* —— CV / A4 sheet —— */
 body:has(.cv-root)::after {
   display: none;
